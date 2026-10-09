@@ -1,17 +1,19 @@
 ### Hi, I'm Kuncheng (Quin) Wu 👋
 
-**Robotics & Autonomous Systems @ UC Berkeley** · M.S. Civil & Environmental Engineering (Transportation Systems), 2026
+**Embodied AI @ UC Berkeley · VLM policies · post-training · robot learning** · M.S. Civil & Environmental Engineering (Transportation Systems), 2026
 Research with **Prof. Xuan Wang's group (Virginia Tech CS)** and the **Systems Cognition Engineering Lab (SCEL)**
 
-I build simulation and robot pipelines where **a drone finds, a quadruped confirms**, vision-language models choose the actions, and an agent decides whether its memory is still good enough to answer.
+I turn vision-language models into **robot policies**: I put VLMs in the closed control loop of simulated drones and quadrupeds, **post-train them** on tool-use trajectories, and build benchmarks for when an embodied agent's memory is good enough to act on.
+
+🌐 **Portfolio:** [kunchengwu.github.io](https://kunchengwu.github.io)
 
 ---
 
 #### 🔭 What I'm working on
 
-- **Air–ground multi-robot control with VLMs.** Isaac Sim and SimWorld (Unreal Engine) workflows for Unitree Go2 navigation, drone inspection, and aerial-to-ground search-and-verify handoffs. Qwen, InternVL and DeepSeek policies compared on success, collisions, stopping, localization error and latency.
+- **VLMs as closed-loop robot policies.** Each step the model sees the robot's camera frame and returns a JSON action. Isaac Sim and SimWorld (Unreal Engine) tasks for Unitree Go2 navigation, drone inspection, and aerial-to-ground search-and-verify handoffs. Qwen, InternVL and DeepSeek policies compared on success, collisions, stopping, localization error and latency.
+- **Post-training a VLM agent to use tools.** A 9B VLM fine-tuned with LoRA (SFT) on 2,955 tool-use trajectories: 69.7 / 64.9 / 55.1% accuracy on surgical video QA (CholecT50 / HeiChole / MultiBypass), +4.5 / +10.6 / +7.4 pts over matched answer-only SFT.
 - **Robot memory: answer, look again, or abstain?** A 760-query benchmark over a replayable dynamic household (RGB / depth / segmentation, visibility-derived memory), across 4 evidence states and 3 observation budgets.
-- **Tool-augmented surgical video reasoning.** A 9B VLM fine-tuned with LoRA on 2,955 tool-use trajectories: 69.7 / 64.9 / 55.1% accuracy on CholecT50 / HeiChole / MultiBypass, +4.5 / +10.6 / +7.4 pts over matched answer-only SFT.
 - **Neural scene representations.** NeRF and 3D Gaussian Splatting from video, for persistent 3D world models.
 
 #### 📄 Publications
@@ -23,9 +25,10 @@ I build simulation and robot pipelines where **a drone finds, a quadruped confir
 
 #### 🛠️ Toolkit
 
-**Learning:** PyTorch · VLM evaluation · LoRA / SFT · tool-use trajectories · GNNs · vLLM
-**Robotics & sim:** Isaac Sim · SimWorld · Unreal Engine / UnrealCV · ROS 2 / ROS 1 · Unitree Go2 · NVIDIA Orin NX
-**3D & spatial:** SLAM · Open3D · point clouds · NeRF · 3D Gaussian Splatting · scene graphs · GIS
+**VLMs & learning:** PyTorch · LoRA / SFT post-training · tool-use trajectories · VLM policy evaluation · vLLM · GNNs
+**Simulation:** Isaac Sim · SimWorld · Unreal Engine / UnrealCV · multi-robot (drone + Unitree Go2)
+**3D & world models:** NeRF · 3D Gaussian Splatting · scene graphs · Open3D
+**Robot systems:** ROS 2 / ROS 1 · NVIDIA Orin NX · LiDAR–inertial SLAM · GIS
 **Languages:** Python · C++ · R · MATLAB
 
 #### 🛤️ Background
@@ -34,5 +37,6 @@ From transportation engineering (B.Eng. Tongji University; airport-siting GNNs, 
 
 #### 📫 Contact
 
-forwu_clrs@berkeley.edu
-<!-- Add when ready: portfolio site, LinkedIn, Google Scholar -->
+Open to full-time roles in robot learning, VLA and embodied foundation models.
+forwu_clrs@berkeley.edu · [kunchengwu.github.io](https://kunchengwu.github.io)
+<!-- Add when ready: LinkedIn, Google Scholar -->
